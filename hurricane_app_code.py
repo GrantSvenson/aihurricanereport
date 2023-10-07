@@ -136,7 +136,7 @@ def plot_map_with_hover(df):
 
 
 def main():
-    st.title("Real Estate Hurricane Risk")
+    st.title("Real Estate Risk Reporter - Hurricane Irma")
     st.header("Hurricane-Force Wind Speed Probabilities")
     st.write("Five Day Forecast")
 
@@ -144,6 +144,7 @@ def main():
     addresses = st.text_area("Enter a list of addresses (each address on a separate line). Limit of 100.")
 
     if st.button("Process Addresses"):
+        #Link to hurricane data
         gdfs = load_all_shapefiles("https://www.nhc.noaa.gov/gis/forecast/archive/al112017_5day_001.zip")
         
         address_list = addresses.split("\n")
